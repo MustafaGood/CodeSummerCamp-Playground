@@ -213,21 +213,27 @@ img{
 }
 
 .btn {
-    padding: .6rem 1.5rem .7rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 100px;
     border: none;
     background: linear-gradient(145deg, #ffffff, #f8fafc);
     color: #2d3748;
     font-weight: 600;
+    font-size: 1.1rem;
     margin: auto 15px auto 0px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         background: linear-gradient(145deg, #f8fafc, #edf2f7);
     }
 
@@ -236,7 +242,7 @@ img{
         box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
     }
 
-    &.btn-outline-hero{
+    &.btn-outline-hero {
         background: transparent;
         border: 2px solid #4a5568;
         color: #4a5568 !important;
@@ -249,16 +255,42 @@ img{
         }
     }
 
-    &.start-page-main-btn{
-        margin: 10%;
-        height:max-content;
-        width: 100%;
-        max-width: 400px;
-        padding: .8rem 1.7rem .9rem 1.7rem;
-        font-size: large;
+    &.start-page-main-btn {
+        font-size: 1.2rem;
+        padding: 1.2rem 2.5rem;
+        margin: 15px auto;
+        min-width: 300px;
+        background: linear-gradient(145deg, #2d3748, #4a5568);
+        color: #ffffff;
+
+        &:hover {
+            background: linear-gradient(145deg, #4a5568, #2d3748);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        &#python-button {
+            background: linear-gradient(145deg, #306998, #4B8BBE);
+            &:hover {
+                background: linear-gradient(145deg, #4B8BBE, #306998);
+            }
+        }
+
+        &#csharp-button {
+            background: linear-gradient(145deg, #68217A, #9B4F96);
+            &:hover {
+                background: linear-gradient(145deg, #9B4F96, #68217A);
+            }
+        }
     }
-    &.playground-btn{
-        margin-bottom: 50px;
+
+    &.playground-btn {
+        background: linear-gradient(145deg, #2d3748, #4a5568);
+        color: #ffffff;
+        min-width: 120px;
+
+        &:hover {
+            background: linear-gradient(145deg, #4a5568, #2d3748);
+        }
     }
 }    
 /* 
