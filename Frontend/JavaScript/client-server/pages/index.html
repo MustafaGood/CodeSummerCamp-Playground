@@ -27,6 +27,9 @@
             <a class="nav-content" id="nav-title" href="index.html"><h1>Code Summer Camp</h1></a>
             <nav class="nav-links">
                 <ul class="nav-content nav-links">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/about">Om oss</a></li>
                     <li hidden><a href="#" page-type="login">Sign in</a></li>             
                     <li><a href="#" page-type="login">Sign out</a></li>             
                 </ul>
@@ -35,19 +38,24 @@
         
         <!--Main page content-->
         <div id="page-container" class="page-container">
-            <!-- <div class="background-blob">
-                <svg viewBox="0 0 200 200" id="mySvg" xmlns="http://www.w3.org/2000/svg"><path fill="#7cf7f9" d="M45.5,-72.1C59.3,-62,71,-49.9,76.4,-35.6C81.8,-21.4,80.8,-4.9,77.3,10.2C73.7,25.4,67.6,39.3,58,50.1C48.4,60.9,35.4,68.6,20.6,75.3C5.8,81.9,-10.8,87.5,-25.1,83.9C-39.4,80.4,-51.4,67.7,-62.4,54.4C-73.4,41.1,-83.4,27.3,-87.9,11.2C-92.5,-4.9,-91.6,-23.1,-84.8,-39.1C-78.1,-55,-65.4,-68.6,-50.3,-78.1C-35.2,-87.6,-17.6,-93.1,-0.9,-91.7C15.9,-90.4,31.7,-82.3,45.5,-72.1Z" transform="translate(100 100)"></path></svg>
-            </div> --> 
-            <div id="button-container-index">
-                <button id="python-button" class="btn start-page-main-btn" page-type="playground" lang-name="python">🐍 Go to Python Playground</button>
-                <button id="csharp-button" class="btn start-page-main-btn" page-type="playground" lang-name="csharp">⚙️ Go to C# Playground</button>
-            </div>       
-
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="video/4709300-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content-overlay">
+                <div id="button-container-index">
+                    <button id="python-button" class="btn start-page-main-btn" page-type="playground" lang-name="python">🐍 Go to Python Playground</button>
+                    <button id="csharp-button" class="btn start-page-main-btn" page-type="playground" lang-name="csharp">⚙️ Go to C# Playground</button>
+                </div>
+            </div>
         </div>
 
         <!--Footer/company logo-->
         <div class="footer">
             <img src="images/Skill_Logo_RGB_Blue.png" alt="Logo for Skill." class="logo">
+            <p class="copyright">Copyright © 2025 codesummercamp. Med ensamrätt.</p>
         </div>
 
     </body>
