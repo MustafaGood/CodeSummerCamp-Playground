@@ -19,6 +19,7 @@ app.use('/css', oExpress.static(path.join(__dirname, 'css')));
 app.use(oExpress.static(path.join(__dirname, 'pages')));
 app.use('/codefiles', oExpress.static(path.join(__dirname, 'codefiles')));
 app.use('/images', oExpress.static(path.join(__dirname, 'images')));
+app.use('/video', oExpress.static(path.join(__dirname, 'video')));
 app.use('/node_modules', oExpress.static(path.join(__dirname, 'node_modules')));
 app.use('/outputfiles', oExpress.static(path.join(__dirname, 'outputfiles')));
 app.use(bodyParser.text({ type: 'text/plain'}))
@@ -85,6 +86,14 @@ app.get('/playground/:lang', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'login.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'about.html'));
 });
 
 /* Returns assignment data to load into website */
