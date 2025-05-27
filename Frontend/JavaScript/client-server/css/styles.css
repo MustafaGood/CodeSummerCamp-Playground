@@ -203,42 +203,100 @@ textarea:focus {
     box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
 }
 
-.footer{
+.footer {
+    background: linear-gradient(to right, var(--purple-900), var(--purple-800));
+    color: var(--purple-50);
+    padding: 2rem 0;
+    margin-top: auto;
+    position: relative;
     z-index: 5;
-    background: linear-gradient(to right, #2d3748, #4a5568);
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    max-height: 40px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    margin-top: auto;
+    gap: 1rem;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+.footer-section h3 {
+    color: var(--accent-aqua);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.footer .logo {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-
-.footer .copyright {
-    color: #666;
-    font-size: 0.9em;
+.footer-links {
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--purple-50);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-aqua);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: var(--purple-50);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-aqua);
+}
+
+.footer-bottom {
     text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
 }
 
 .logo{
