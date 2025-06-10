@@ -10,7 +10,7 @@ $(function () {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             if (link.getAttribute('href') == 'index.html') {
-                windowTitle.innerText = 'Hem';
+                if (windowTitle) windowTitle.innerText = 'Hem';
                 return;
             }
             e.preventDefault();
@@ -26,10 +26,12 @@ $(function () {
         const lang = link.getAttribute('lang-name');
 
         // Update window title based on the link type
-        if (page === 'playground') {
-            windowTitle.innerText = `${lang.toUpperCase()} Playground`;
-        } else {
-            windowTitle.innerText = link.textContent.trim();
+        if (windowTitle) {
+            if (page === 'playground') {
+                windowTitle.innerText = `${lang.toUpperCase()} Playground`;
+            } else {
+                windowTitle.innerText = link.textContent.trim();
+            }
         }
 
         // Add script-file to container-content
@@ -49,7 +51,7 @@ $(function () {
                 })
                 .catch(err => {
                     console.log('Failed fetching page: ', err);
-                    windowTitle.innerText = 'Error';
+                    if (windowTitle) windowTitle.innerText = 'Error';
                 });
         } else {
             // Handle regular navigation
@@ -62,7 +64,7 @@ $(function () {
                     })
                     .catch(err => {
                         console.log('Failed fetching page: ', err);
-                        windowTitle.innerText = 'Error';
+                        if (windowTitle) windowTitle.innerText = 'Error';
                     });
             }
         }
