@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Summer Camp - Om oss</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            color: var(--purple-50);
+        }
+
+        h3 {
+            color: #3498db;
+            margin-top: 1.5em;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .camp-format {
+            background: rgba(248, 249, 250, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .camp-format:hover {
+            transform: translateY(-2px);
+        }
+
+        .camp-format h4 {
+            color: var(--purple-50);
+            margin-top: 0;
+        }
+
+        .contact-info {
+            background: rgba(248, 249, 250, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            min-height: calc(100vh - 120px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        a.highlight {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a.highlight:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--Main page content-->
+    <div class="page-container">
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="video/4709300-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="content-overlay">
+            <div class="container">
+                <div class="section">
+                    <h2>Om Code Summer Camp</h2>
+                    <p>Code Summer Camp är ett svenskt sommarläger som syftar till att väcka intresse och nyfikenhet för
+                        teknik, programmering, digitalt skapande, kreativitet och problemlösning hos barn och unga,
+                        oavsett förkunskaper. Sedan starten har över 1 900 deltagare medverkat i lägret.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Om Code Summer Camp 2025</h3>
+                    <p>Lägret erbjuder olika format för att passa olika behov:</p>
+
+                    <div class="camp-format">
+                        <h4>Fysiskt läger</h4>
+                        <p>Hålls på Linköpings Universitet under veckorna 25–27, med olika åldersgrupper varje vecka.
+                        </p>
+                    </div>
+
+                    <div class="camp-format">
+                        <h4>Digitalt läger</h4>
+                        <p>Deltagare födda 2008–2015 kan delta på distans under vecka 25.</p>
+                    </div>
+
+                    <div class="camp-format">
+                        <h4>Hybridläger</h4>
+                        <p>Deltagare sitter på angivna platser i olika städer och är uppkopplade mot den digitala
+                            veckan.</p>
+                    </div>
+
+                    <p>Deltagarna får prova på olika programmeringsspråk och delta i inspirerande möten med partners
+                        inom industri- och tech/IT-branschen.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Organisation och kontakt</h3>
+                    <p>Code Summer Camp projektleds av Skill i samarbete med Linköping Science Park.</p>
+
+                    <div class="contact-info">
+                        <h4>Kontaktperson:</h4>
+                        <p><span class="highlight">Namn:</span> Mattias Hellström</p>
+                        <p><span class="highlight">E-post:</span> mattias.hellstrom@skill.se</p>
+                        <p><span class="highlight">Telefon:</span> 079 006 46 99</p>
+                    </div>
+
+                    <p>För mer information och anmälan, besök <a href="https://codesummercamp.se"
+                            class="highlight">codesummercamp.se</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer/company logo-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/about">Om oss</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontakta oss</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:mattias.hellstrom@skill.se"><i class="fas fa-envelope"></i>
+                            mattias.hellstrom@skill.se</a></li>
+                    <li><a href="tel:0790064699"><i class="fas fa-phone"></i> 0790-06 46 99</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Följ oss</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/skill-peoplechange-everything/posts/?feedView=all"
+                        target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/skill_sverige/" target="_blank" rel="noopener noreferrer"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/codesummercamp/" target="_blank" rel="noopener noreferrer"
+                        title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://codesummercamp.se/" target="_blank" rel="noopener noreferrer" title="Webbplats"><i
+                            class="fas fa-globe"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <img src="images/Skill_Logo_RGB_Blue.png" alt="Logo for Skill." class="footer-logo">
+            <p class="copyright">Copyright © 2025 codesummercamp. Med ensamrätt.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
